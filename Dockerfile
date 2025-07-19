@@ -5,6 +5,7 @@ FROM php:8.1-fpm
 # Make sure to install libmagickwand-dev before installing imagick extension
 # Also, add --prefer-dist to composer install if you use composer later (good practice)
 RUN apt-get update && apt-get install -y \
+    nginx \              # <-- यह लाइन जोड़ें
     libmagickwand-dev \
     ghostscript \
     # Other common build tools if needed
